@@ -13,7 +13,8 @@ def main():
     for c in encryptedalphabet:
         encrypted_alphabet[i]=c
         i+=1
-
+    
+    #Added test comments
     print("Your unencrypted message is: ", msg)
     
     print("Your encrypted message is: ", end="")
