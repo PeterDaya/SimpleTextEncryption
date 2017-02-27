@@ -5,11 +5,10 @@ def main():
     print(encrypt)
 
     print("Alphabet:  ", end="")
-    for n in range(26):
-        letter = chr(n+65)
-        
-        print(letter, end="")
 
+    for n in range(26):
+        letter = chr(n+65)    
+        print(letter, end="")
         notfound = True
         while notfound:
             possible_position = random.randint(0,25)
@@ -18,6 +17,7 @@ def main():
         encrypt[possible_position] = letter
 
     print("\nScrambled: " , end="")
+
     for n in range(26):
         print(encrypt[n], end="")
 
@@ -25,8 +25,10 @@ def main():
 
     alphabet=""
     msg=input("Please enter your encrypted message: ")
+
     for n in range(26): #It now begins the process for writing the encrypted alphabet to the disk.
         alphabet+=encrypt[n]
+
     alphabet_file=open("encryptedalphabet.txt", "w")
     alphabet_file.write(alphabet)
     alphabet_file.close()
